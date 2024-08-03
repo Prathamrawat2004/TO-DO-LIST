@@ -1,0 +1,130 @@
+.white{
+    color: white;
+}
+
+.black{
+    color: black;
+}
+
+.custom-link {
+    text-decoration: none;
+    /* color: black; */
+}
+
+.red{
+    color: red;
+}
+
+.strip{
+    border: 1px solid black;
+}
+
+.strip_dark{
+    color: white;
+    border: 1px solid white;
+}
+
+.modalPos{
+    position: absolute;
+    left: 36%;
+}
+
+.back{
+    backdrop-filter: blur(10px);
+}
+
+.z-index-0{
+    z-index: 0;
+}
+
+.z-index-1{
+    z-index: 1;
+}
+
+.btn-orange {
+    background-color: #fd7e14; /* Orange color */
+    border-color: #fd7e14;
+    color: white;
+}
+
+
+
+@media(max-width:360px){
+    .items input{
+        display: none;
+    }
+
+    .items{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .item-1{
+        margin-bottom: 1.5%;
+        margin-left: 5%;
+    }
+}
+
+
+
+
+
+@media(min-width:360px) and (max-width:500px) {
+    .items {
+        margin-left: 20%;
+        
+    }
+
+    .item-1 {
+        margin-left: 10%;
+        margin-bottom: 1.5%;
+    }
+
+    .item-2{
+        flex-direction: column;
+        
+    }
+    .add{
+        margin-bottom: 3%;
+        margin-top: 3%;
+    }
+
+}
+
+@media(min-width:504px) and (max-width:764px){
+    .item-1{
+        margin-left: 10%;
+        margin-bottom: 1%;
+    }
+
+    .login{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    
+}
+
+@media(max-width:920px){
+    .login1{
+        font-size: medium;
+    }
+
+    .email{
+        font-size: small;
+    }
+
+    .password{
+        font-size: small;
+    }
+
+    input{
+        max-width: 55%
+
+    }
+}
+
+
+
