@@ -2,12 +2,16 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthProvider';
 const SignUp = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
+    const navigate = useNavigate();
+    const [AuthUser, setAuthUser] = useAuth();
 
     const onSubmit = async (data) => {
         const userInfo = {
@@ -21,9 +25,12 @@ const SignUp = () => {
             console.log(res.data);
             if (res.data) {
                 toast.success("Signup successfull");
+                
             }
             // setting up to localstorage in order to protect "add"
             localStorage.setItem("Users", JSON.stringify(res.data.user));
+            setAuthUser(res.data.user);
+            navigate('/');
         } catch (error) {
             console.log(error);
             toast.error(error.response.data.message);

@@ -45,6 +45,7 @@ const Navbar = () => {
 
     const handleAddButtonClick = () => {
         if (authUser) {
+            navigate('/');
             openModal();
         } else {
             navigate('/signup');
